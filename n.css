@@ -12,8 +12,11 @@ html {
 body{
      background-color:#010F56 ;
      color:#F1F5F9 ;
-      
+  
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.4;
 }
+
 
     header {
       display: flex;
@@ -53,7 +56,11 @@ nav ul li i {
 
 /* Common base style */
 
-
+.fa-github:hover {
+  color: white;
+  background-color:#1DA1F2;
+  box-shadow: 0 0 8px #1DA1F2;
+}
 /* 🔵 LinkedIn (official blue) */
 .fa-linkedin:hover {
   color: white;
@@ -62,23 +69,19 @@ nav ul li i {
 }
 
 /* 🔷 Facebook (deep blue) */
-.fa-facebook:hover {
+.fa-instagram:hover {
   color: white;
   background-color: #1877F2;
   box-shadow: 0 0 8px #1877F2;
 }
 
 /* 🔹 Twitter (sky blue) */
-.fa-twitter:hover {
+.fa-envelope:hover {
   color: white;
   background-color: #1DA1F2;
   box-shadow: 0 0 8px #1DA1F2;
 }
-.fa-github:hover {
-  color: white;
-  background-color:#1DA1F2;
-  box-shadow: 0 0 8px #1DA1F2;
-}
+
 /* home section */
 #outerbox {
   display: flex;
@@ -92,22 +95,33 @@ nav ul li i {
 }
 
 #aboutme {
-
 height:400px;
 margin-left:10%;
   
+}
+#aboutme h2{
+   font-size: 2rem;
+   text-transform: capitalize;
+  word-spacing: 5px;
 }
 
 #aboutme h1 {
   /* text-align: center; */
   font-size: 3rem;
   text-transform: capitalize;
-  
   word-spacing: 3px;
   
 }
-#aboutme span{
-    border-bottom: 4px solid #30f26b; 
+#aboutme span {
+  border-bottom: 4px dotted #30f26b;
+  display: inline-block;
+  animation: borderBlink 1s infinite;
+}
+
+@keyframes borderBlink {
+  0% { border-color: #30f26b; }
+  50% { border-color: transparent; }
+  100% { border-color: #30f26b; }
 }
 
 .intro{
@@ -119,21 +133,28 @@ margin-left:10%;
   font-weight: bold;
   
 }
-a {
+.btn-contact {
   display: inline-block;
   margin-top: 30px;
   font-size: 20px;
   font-weight: bold;
   text-transform: uppercase;
-
   text-decoration: none;
-  color:#22d3ee;
+  color: #22d3ee;
+  padding: 10px 25px;
+    cursor: pointer;
+
+  border: 2px solid #22d3ee;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
-a:hover {
-  color: #30f26b;
+
+.btn-contact:hover {
+  background-color: #30f26b;
   border-color: #30f26b;
-  transition: 0.3s;
+  color: #010F56;
 }
+
 
 
 #image {
@@ -357,9 +378,17 @@ form button:hover {
   border-color: #30f26b;
 }
 /* FOOTER */
-footer {
+/* footer {
   text-align: center;
   padding: 20px;
   background-color: #081a7a;
   color: #ffffff;
+} */
+footer {
+  text-align: center;
+  padding: 20px 10px;
+  background-color: #081a7a;
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 1px;
 }
